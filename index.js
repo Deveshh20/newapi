@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-
+const cors=require('cors')
 // Survey questions data
 const surveyQuestions = {
     technology: [
@@ -44,3 +44,4 @@ app.get('/api/survey/education', (req, res) => {
 app.listen(port, () => {
     console.log(`Survey API server running at http://localhost:${port}`);
 });
+app.use(cors());
