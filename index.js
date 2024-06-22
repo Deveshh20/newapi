@@ -26,7 +26,7 @@ const surveyQuestions = {
         "What is the biggest barrier to furthering your education?"
     ]
 };
-
+app.use(cors());
 // Routes to fetch survey questions
 app.get('/survey/technology', (req, res) => {
     res.json(surveyQuestions.technology);
@@ -44,4 +44,4 @@ app.get('/survey/education', (req, res) => {
 app.listen(port, () => {
     console.log(`Survey API server running at http://localhost:${port}`);
 });
-app.use(cors());
+
