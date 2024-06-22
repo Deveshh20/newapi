@@ -28,15 +28,15 @@ const surveyQuestions = {
 };
 
 // Routes to fetch survey questions
-app.get('/api/survey/technology', (req, res) => {
+app.get('/survey/technology', (req, res) => {
     res.json(surveyQuestions.technology);
 });
 
-app.get('/api/survey/health', (req, res) => {
+app.get('/survey/health', (req, res) => {
     res.json(surveyQuestions.health);
 });
 
-app.get('/api/survey/education', (req, res) => {
+app.get('/survey/education', (req, res) => {
     res.json(surveyQuestions.education);
 });
 
